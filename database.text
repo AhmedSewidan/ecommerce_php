@@ -1,0 +1,73 @@
+CREATE TABLE user_type (
+    user_type_id INT AUTO_INCREMENT PRIMARY KEY,
+    type_name VARCHAR(50) NOT NULL
+);
+
+INSERT INTO user_type SET type_name = 'Customer';
+INSERT INTO user_type SET type_name = 'Admin';
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    user_pass VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20),
+    photo BLOB,
+    user_type_id INT,
+    Date_Add TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_type_id) REFERENCES user_type(user_type_id)
+);
+
+
+CREATE TABLE sections (
+    section_id INT AUTO_INCREMENT PRIMARY KEY,
+    section_name VARCHAR(255) NOT NULL,
+    photo LONGBLOB
+);
+
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    photo LONGBLOB, -- Assuming you store the image as a binary large object
+    product_name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL, -- Changed to DECIMAL for proper monetary values
+    quantity INT NOT NULL,
+    product_status ENUM('Available', 'Not Available') NOT NULL,
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    section_id INT, -- Assuming there is a `section` table to reference
+    FOREIGN KEY (section_id) REFERENCES sections(section_id) -- Replace with actual section table reference
+);
+
+CREATE TABLE customer_orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    status ENUM('Pending', 'Shipped', 'Delivered', 'Cancelled') NOT NULL,
+    country VARCHAR(100),
+    city VARCHAR(100),
+    address TEXT,
+    second_phone VARCHAR(20),
+    _comment TEXT,
+    first_name VARCHAR(100),
+    second_name VARCHAR(100),
+    delivery ENUM('Standard', 'Express'),
+    pay ENUM('Cash', 'Credit Card', 'Paypal'),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE one_product_order (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    order_quantity INT NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    user_id INT NOT NULL,
+    status ENUM('Not Ordered', 'Ordered') NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+CREATE TABLE review (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    review_message TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id), -- Assuming you have a `users` table
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
