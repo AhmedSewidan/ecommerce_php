@@ -1,0 +1,161 @@
+
+.message {
+    text-align: center;
+    width: 560px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.message h4 {
+    padding-top: 13px;
+    color: rgb(251 251 251);
+}
+
+.message a {
+    color: white;
+    font-size: 25px;
+    font-weight: 100px;
+}
+
+.message a:hover {
+    color: rgb(194, 193, 193);
+}
+
+.message a:focus {
+    color: rgb(192, 184, 184);
+}
+
+.red {
+    color: red;
+}
+
+#messageAdd {
+    background-color: #80eb73;
+    margin-top: 20px;
+    position: relative;
+    left: 206px;
+}
+
+#messageNotAdd {
+    background-color: rgb(207, 29, 29);
+    margin-top: 20px;
+    position: relative;
+    left: 206px;
+}
+
+.btn-primary{
+    margin-left: 20px;
+}
+
+.table tr td, .table tr th {
+    text-align: center;
+}
+
+.delete, #deleteAll{
+    position: relative;
+    top: 1px;
+    right: -1px;
+    padding: 11px 20px;
+    color: #fff; 
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    background-color: #e12b2b; 
+    margin: 5px 0px 0px 17px;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
+}
+#deleteAll
+{
+    display: none;
+}
+#select:hover
+{
+    background-color: #e5e4e4; /* Light gray background on hover */
+}
+
+.delete:hover, #deleteAll:hover {
+    background-color: #bd2c2c; 
+    color: #fff !important;
+    border-color: #5f61e6 !important;
+    transform: trargb(225, 30, 30)(-1px) !important;
+    transform: translateY(-1px) !important;
+}
+
+#deleteAll:focus {
+background-color: #9c0c0c; 
+}
+
+.menu-item:focus {
+    color: #696cff;
+    background-color: rgba(105, 108, 255, 0.16) !important;
+    outline: none;
+}
+
+
+.col-sm-10 span{
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .col-sm-10 #password, .col-sm-10 span {
+    display: inline-block;
+  }
+  #col-sm-10{
+    margin: 0px 0px 30px 20px;
+  }
+  .custom-file-button {
+    text-align: center;
+    /* display: inline-block; */
+    padding: 8px 0px;
+    background-color: #696cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* margin-top: 10px; */
+    width: 140px;
+  }
+  
+  .custom-file-button:hover {
+    background-color: #5f61e6;
+    transform: translateY(-1px) !important;
+  }
+  
+  .custom-file-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add focus border */
+  }
+  
+  /* Hide default file input */
+  input[type="file"] {
+    display: none;
+  }
+  
+  #add {
+    margin-bottom: 13px;
+  }  
+
+  .image-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} 
+
+.menu-item.active .menu-link .menu-icon {
+  color: blue;
+}
+
+.eye{
+  position: absolute;
+  top: 129px;
+  left: 973px;
+  cursor: pointer;
+}
+

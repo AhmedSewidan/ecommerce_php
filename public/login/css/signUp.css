@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+small {
+    color: red;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #166fe5;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.custom-file-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .custom-file-button:hover {
+    background-color: #166fe5;
+    transform: translateY(-1px) !important;
+  }
+
+  .custom-file-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add focus border */
+  }
+
+  /* Hide default file input */
+  input[type="file"] {
+    display: none;
+  }
+
+  input[type="submit"] {
+    margin-top: 24px;
+  }
+   a {
+        color: #1877f2;
+        text-decoration: none;
+        margin-left: 50px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .image-preview {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    } 
+
+     .choose, .small {
+        display: inline;
+    }
+
+    .small{
+        position: relative;
+        top: 12px;
+        left: 10px;    
+    }
+
+    .eye{
+        position: relative;
+        top: -31px;
+        left: 296px;
+        cursor: pointer;
+      }
+
+      input[type="tel"] {
+        margin-top: -11px;
+      }
+      input[type="tel"]:focus {
+        box-shadow: 0 4px 15px 0 rgb(91, 38, 238);
+        border: none;
+    }
+    
+    input[type="password"]:focus {
+        box-shadow: 0 4px 15px 0 rgb(91, 38, 238);
+        border: none;
+    
+    }
+    
+    input[type="text"]:focus {
+        box-shadow: 0 4px 15px 0 rgb(91, 38, 238);
+        border: none;
+    }
